@@ -19,8 +19,8 @@
 
 title:            'Wax'
 description:      'Minimal Exhibitions with Jekyll'
-url:              'https://minicomp.github.io'
-baseurl:          '/wax'
+url:              'https://srsergiorodriguez.github.io'
+baseurl:          '/test-wax'
 copyright:        'Example copyright org, 2023'
 logo:             '/assets/logo.png'
 default_thumb:    '/assets/default.png'
@@ -59,13 +59,13 @@ kramdown:
 collections:
   exhibits:
     output: true
-  qatar: # name of collection
+  test: # name of collection
     output: true # makes sure pages are output as html files
-    layout: 'qatar_item' # the layout for the pages to use
+    layout: 'test_item' # the layout for the pages to use
     metadata:
-      source: 'qatar.csv' # path to the metadata file within `_data`
+      source: 'test.csv' # path to the metadata file within `_data`
     images:
-      source: 'raw_images/qatar' # path to the directory of images within `_data`
+      source: 'raw_images/test' # path to the directory of images within `_data`
 
 # --------------------------------------------------------------
 # SEARCH INDEX SETTINGS
@@ -79,15 +79,14 @@ search:
   main:
     index: '/search/index.json' # file the index will get written to
     collections:
-      qatar:
+      test:
         content: false # whether or not to index page content
         fields: # the metadata fields to index
-          - artist
-          - location
           - label
-          - _date
-          - object_type
-          - current_location
+          - author
+          - description
+          - year
+          - categories
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
